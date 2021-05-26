@@ -19,7 +19,7 @@ st.markdown("Cette application est destinée à la détection de fraude par des 
 st.sidebar.markdown("Est-ce une transaction frauduleuse ou pas ? 💳")
 
 # Fonction de chargement des donnees
-@st.cache(persist = True)
+#@st.cache(persist = True)
 def load_data():
     data = pd.read_csv("creditcard.csv")
     return data
@@ -33,7 +33,7 @@ if st.sidebar.checkbox("Données brutes",False):
 
 seed = 123
 # Creation d'un train set et d'un test set
-@st.cache(persist = True)
+#@st.cache(persist = True)
 def split(df):
     y = df.Class
     X = df.drop('Class', axis = 1)
